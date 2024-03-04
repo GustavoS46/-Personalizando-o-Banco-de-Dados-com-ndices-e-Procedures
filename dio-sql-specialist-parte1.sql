@@ -1,5 +1,4 @@
 USE company;
-
 ---------------------------------------------------
 -- Qual o departamento com maior n�mero de pessoas? 
 ---------------------------------------------------
@@ -15,10 +14,8 @@ GROUP BY
 ORDER BY 
 	2 DESC
 LIMIT 1
-
 -- �ndice para "departamento com maior n�mero de pessoas?"
 CREATE INDEX idx_employee ON employee(Dno);
-    
 -----------------------------------------
 -- Quais s�o os departamentos por cidade?
 -----------------------------------------
@@ -28,14 +25,11 @@ SELECT
 FROM
 	departament D
 LEFT JOIN
-	dept_locations DL ON D.Dnumber = DL.Dnumber
+	departament_locations DL ON D.Dnumber = DL.Dnumber
 ORDER BY
 	DL.Dlocation;
-
 -- �ndice para "Quais s�o os departamentos por cidade?"
-CREATE INDEX idx_departament ON departament(Dnumber);
-    
-
+CREATE INDEX idx_departament ON departament(Dnumber);  
 ------------------------------------------
 -- Rela��o de empregados por departamento?
 ------------------------------------------
@@ -47,8 +41,7 @@ FROM
 LEFT JOIN
 	departament D ON D.Dnumber = E.Dno
 ORDER BY 
-	D.Dname, E.Fname, E.Fname , E.Lname ;
-    
+	D.Dname, E.Fname, E.Fname , E.Lname ; 
 -- �ndice para "Rela��o de empregados por departamento?"
 CREATE INDEX idx_employee_FullName ON employee((concat(Fname, " ", Minit, " ", Lname)));
 CREATE INDEX idx_employee_Fname ON employee(Fname);
