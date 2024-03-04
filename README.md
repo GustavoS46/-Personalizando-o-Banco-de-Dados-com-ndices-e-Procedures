@@ -44,7 +44,3 @@ Criar uma procedure que possua as instruções de inserção, remoção e atuali
 Além das variáveis de recebimento das informações, a procedure deverá possuir uma variável de controle. Essa variável de controle irá determinar a ação a ser executada. Ex: opção 1 – select, 2 – update, 3 – delete. 
 
 Sendo assim, altere a procedure abaixo para receber as informações supracitadas. 
-
-Entregável: 
-
-Script SQL com a procedure criada e chamada para manipular os dados de universidade e e-commerce. Podem ser criados dois arquivos distintos, assim como a utilização do mesmo script para criação das procedures. Fique atento para selecionar o banco de dados antes da criação da procedure.  
