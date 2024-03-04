@@ -1,4 +1,4 @@
--- procedure para ecommerce
+-- procedure para um ecommerce
 USE ecommerce;
 
 CREATE PROCEDURE CRUD(
